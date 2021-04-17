@@ -3,19 +3,18 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-
 pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: '8.x'
+      versionSpec: '12.x'
     displayName: 'Installing Node.js'
 
   - script: |
-      npm install
-      npm run build
+      yarn
+      yarn build
     displayName: 'Running npm install and build'
   - task: CopyFiles@2
     inputs:
