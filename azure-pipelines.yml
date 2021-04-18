@@ -14,6 +14,7 @@ steps:
 
   - script: |
       yarn
+      yarn clean
       yarn build
     displayName: 'Running npm install and build'
   - task: CopyFiles@2
