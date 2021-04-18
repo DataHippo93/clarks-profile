@@ -32,22 +32,33 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project-el.jpg',
-    title: 'Automated EL Image Defect Detection',
-    info: 'ML-based defect detection algorithm',
-    info2: '',
+    img: 'services-data.jpg',
+    title: 'Data Engineering Services',
+    info:
+      'Data pipeline construction, custom ETL, database tuning, query optimization and API integrations',
+    info2:
+      'Draw on my extensive knowledge of information technology and data engineering to make your data pipelines work for you.',
     url: '',
     repo: '', // if no repo, the button will not show up
   },
-  {
-    id: nanoid(),
-    img: 'project-cabin.jpg',
-    title: 'Off-grid Cabin',
-    info: 'Off-grid work from home ready AirBNB featuring Starlink',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
+  // {
+  //   id: nanoid(),
+  //   img: 'services-data.jpg',
+  //   title: 'Custom ERP Development',
+  //   info: 'Custom ETL, database tuning, query optimization, API integrations, ',
+  //   info2: '',
+  //   url: '',
+  //   repo: '', // if no repo, the button will not show up
+  // },
+  // {
+  //   id: nanoid(),
+  //   img: 'project-cabin.jpg',
+  //   title: 'Off-grid Cabin',
+  //   info: 'Off-grid work from home ready AirBNB featuring Starlink',
+  //   info2: '',
+  //   url: '',
+  //   repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  // },
 ];
 
 // CONTACT DATA
