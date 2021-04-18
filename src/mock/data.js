@@ -20,7 +20,7 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'Clark is a versatile IT Professional focused on building great data pipelines that become strategic differentiators. Clark currently lives and works in Shanghai, China.',
+    'Clark is a versatile IT Professional focused on building data pipelines that become strategic differentiators. Clark currently lives and works in Shanghai, China.',
   paragraphTwo: 'Worked at Xerox and Clean Energy Associates',
   paragraphThree: '5+ years of experience in Data Engineering. 2+ Years in renewables',
   paragraphFour: `Holds Masters of Data Analytics, Clarkson University. MBA, Clarkson University. Bachelors of Economics, St. Lawrence University`,

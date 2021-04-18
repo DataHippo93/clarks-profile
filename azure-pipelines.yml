@@ -16,7 +16,7 @@ steps:
       yarn
       yarn clean
       yarn build
-    displayName: 'Running npm install and build'
+    displayName: 'Running yarn install, clean and build'
   - task: CopyFiles@2
     inputs:
       sourceFolder: '$(System.DefaultWorkingDirectory)'
