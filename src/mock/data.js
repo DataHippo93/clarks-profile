@@ -25,7 +25,7 @@ export const aboutData = {
   paragraphThree: '5+ years of experience in Data Engineering. 2+ Years in renewables',
   paragraphFour: `Holds Masters of Data Analytics, Clarkson University. MBA, Clarkson University. Bachelors of Economics, St. Lawrence University`,
   resume:
-    'https://yccgeneralstore.blob.core.windows.net/clarksprofile/Clark%20Maine%20Senior%20Data%20Engineer.pdf?sp=r&st=2021-04-17T09:46:11Z&se=2025-04-17T17:46:11Z&spr=https&sv=2020-02-10&sr=b&sig=yh6ryI1fHsfTOgY7h7CyeGFz4TBzyIOpY280c1zpcM8%3D', // if no resume, the button will not show up
+    'https://yccgeneralstore.blob.core.windows.net/clarksprofile/Clark%20Maine%20Senior%20Data%20Engineer.pdf?sp=r&st=2021-04-18T02:49:27Z&se=2025-04-18T10:49:27Z&spr=https&sv=2020-02-10&sr=b&sig=DefL8Ez7NENVdYVQ9LKOclCT9TmCNWUHnB37fah5kWA%3D', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
