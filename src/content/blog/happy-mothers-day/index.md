@@ -7,10 +7,10 @@ description: "Happy Mother's Day to Yen!"
 
 ## Dear Mom
 
-> I know I'm still in your BIG belly but I didn't want a chance to wish you a Happy Mothers day.
+> I know I'm still in your BIG belly but I didn't want to miss a chance to wish you a Happy Mothers day.
 
-> I have growing ALOT recently because of all the bamboo and Boba Tea you have been feeding me.
-> I also really enjoyed the fresh Air in Moganshan on our recent trip.
+> I have grown ALOT recently because of all the bamboo, ice cream and Boba Tea you have been feeding me.
+> I also really enjoyed the fresh air in MGS on our recent adventure.
 > I can't wait to make fun of Dad in the future with you when he rides E-Bikes.
 > Don't forget to show me this HILARIOUS Photo once I'm out in the real world.
 > ![Biker Mom](./bike.jpg)
@@ -29,12 +29,10 @@ description: "Happy Mother's Day to Yen!"
 > ![Keep Feeding Me](./korean-bbq.jpg)
 
 > Dad made me include this photo cause he said you would like it.
-
-![Funny Face Mom](./funny-face-mom.jpg)
+> ![Funny Face Mom](./funny-face-mom.jpg)
 
 > Have the best mothers day EVER. Can't wait for you to hold me soon.
-
-![3D Baby](./3D-baby.jpg)
+> ![3D Baby](./3D-baby.jpg)
 
 ## With Love From Your 小孩子,
 
