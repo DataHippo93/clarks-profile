@@ -3,11 +3,12 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
+import BlogPlug from './Blog/BlogPlug';
 import Footer from './Footer/Footer';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+import { heroData, aboutData, projectsData, contactData, footerData } from '../content/data';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -29,6 +30,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <BlogPlug />
       <Contact />
       <Footer />
     </PortfolioProvider>
