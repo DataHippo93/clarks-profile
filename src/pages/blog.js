@@ -16,7 +16,7 @@ export default function Blog({ data }) {
             {post.frontmatter.author}, {post.frontmatter.date}
           </small>
           <p>{post.excerpt}</p>
-          <Link to={`/blog/${post.fields.slug}`}> Read </Link>
+          <Link to={`/blog${post.fields.slug}`}> Read </Link>
         </article>
       ))}
     </div>

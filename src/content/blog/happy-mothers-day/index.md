@@ -32,8 +32,10 @@ description: "Happy Mother's Day to Yen!"
 
 ![Funny Face Mom](./funny-face-mom.jpg)
 
-> Have the best mothers day EVER
+> Have the best mothers day EVER. Can't wait for you to hold me soon.
 
-## With Love From You 小孩子,
+![3D Baby](./3D-baby.jpg)
+
+## With Love From Your 小孩子,
 
 ## JJM
