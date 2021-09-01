@@ -3,8 +3,11 @@ import { graphql, Link, useScrollRestoration } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { Header } from '../components/Blog/BlogHeader';
+import Footer from '../components/Footer/Footer';
 import BlogImg from '../components/Blog/BlogImage';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { PortfolioProvider } from '../context/context';
+import { heroData, aboutData, projectsData, contactData, footerData } from '../content/data';
 
 const PostCards = ({ posts, totalCount, cardsPerRow }) => {
   let cardArray = [];
@@ -73,40 +76,57 @@ export default function Blog({ data }) {
     setState({ ...state, posts: searchResult, pageInfo: { totalCount: searchResult.length } });
   }, [searchTerm]);
 
+  const [hero, setHero] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
   return (
     <>
-      <Header siteTitle={title} siteDescription={description} />
+      <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+        <Header siteTitle={title} siteDescription={description} />
 
-      <section id="bloghome">
-        <Container className="bloghome-container-wrapper" {...ulScrollRestoration}>
-          <Row>
-            <Col>
-              <div className="bloghome-searchbar-wrapper">
-                <h3 className="label"> Search Blog </h3>
-                <input
-                  type="text"
-                  placeholder="Type to filter posts..."
-                  className="input"
-                  onChange={(event) => setSearchTerm(event.target.value.toLowerCase())}
-                />
-              </div>
-            </Col>
-          </Row>
-          <Row className="bloghome-post-wrapper">
-            <Col>
-              {state.pageInfo.totalCount > 0 ? (
-                <PostCards
-                  posts={state.posts}
-                  totalCount={state.pageInfo.totalCount}
-                  cardsPerRow={2}
-                />
-              ) : (
-                <h3 className="noPostsFound"> No Posts Found </h3>
-              )}
-            </Col>
-          </Row>
-        </Container>
-      </section>
+        <section id="bloghome">
+          <Container className="bloghome-container-wrapper" {...ulScrollRestoration}>
+            <Row>
+              <Col>
+                <div className="bloghome-searchbar-wrapper">
+                  <h3 className="label"> Search Blog </h3>
+                  <input
+                    type="text"
+                    placeholder="Type to filter posts..."
+                    className="input"
+                    onChange={(event) => setSearchTerm(event.target.value.toLowerCase())}
+                  />
+                </div>
+              </Col>
+            </Row>
+            <Row className="bloghome-post-wrapper">
+              <Col>
+                {state.pageInfo.totalCount > 0 ? (
+                  <PostCards
+                    posts={state.posts}
+                    totalCount={state.pageInfo.totalCount}
+                    cardsPerRow={2}
+                  />
+                ) : (
+                  <h3 className="noPostsFound"> No Posts Found </h3>
+                )}
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <Footer />
+      </PortfolioProvider>
     </>
   );
 }
