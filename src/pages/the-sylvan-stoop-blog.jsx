@@ -29,7 +29,9 @@ const PostCards = ({ posts, totalCount, cardsPerRow }) => {
             <h1>{post.frontmatter.title}</h1>
             <p>{post.excerpt}</p>
           </div>
-          <Link to={`/the-sylvan-stoop-blog/${post.slug}`}> Read </Link>
+          <Link to={`/the-sylvan-stoop-blog/${post.slug}`} className="btn_primary">
+            Read
+          </Link>
         </div>
       </article>
     );
@@ -70,8 +72,6 @@ export default function Blog({ data }) {
 
     setState({ ...state, posts: searchResult, pageInfo: { totalCount: searchResult.length } });
   }, [searchTerm]);
-
-  console.log(state);
 
   return (
     <>

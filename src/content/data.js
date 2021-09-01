@@ -86,6 +86,17 @@ export const footerData = {
       name: 'github',
       url: 'https://github.com/DataHippo93',
     },
+
+    {
+      id: nanoid(),
+      name: 'instagram',
+      url: 'https://www.instagram.com/ccmain11',
+    },
+    {
+      id: nanoid(),
+      name: 'rss',
+      url: 'https://clarkmaine.com/rss.xml',
+    },
   ],
 };
 

@@ -50,7 +50,7 @@
       .img_pod {
         height: 110px;
         width: 110px;
-        background: linear-gradient(90deg, #ff9966, #ff5e62);
+        background: linear-gradient(90deg, secondary-color, $primary-color);
         z-index: -1;
         box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
         border-radius: 100%;
@@ -93,12 +93,12 @@
       .btn_primary {
         border: none;
         outline: none;
-        background: linear-gradient(90deg, #ff9966, #ff5e62);
+        background: linear-gradient(90deg, $secondary-color, $primary-color);
         padding: 1.5rem 2rem;
         border-radius: 50px;
         color: white;
-        font-size: 1.2rem;
-        box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+        font-size: 1.5rem;
+        box-shadow: 1px 10px 2rem $primary-color;
         transition: all 0.2s ease-in;
         text-decoration: none;
       }

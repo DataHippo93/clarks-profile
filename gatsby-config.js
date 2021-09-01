@@ -28,10 +28,10 @@ module.exports = {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
                 return {
-                  description: edge.node.frontmatter.excerpt,
+                  description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                  url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
                   ...edge.node.frontmatter,
                 };
               });
@@ -44,8 +44,8 @@ module.exports = {
                   edges {
                     node {
                       fields { slug }
-                      excerpt(pruneLength: 160)
                       frontmatter {
+                        description
                         title
                         date
                       }
@@ -55,7 +55,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Blogging for Devs',
+            title: 'The Sylvan Stoop Blog',
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
