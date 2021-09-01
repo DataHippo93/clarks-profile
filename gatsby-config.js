@@ -30,8 +30,8 @@ module.exports = {
                 return {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/the-sylvan-stoop-blog${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/the-sylvan-stoop-blog${edge.node.fields.slug}`,
                   ...edge.node.frontmatter,
                 };
               });
