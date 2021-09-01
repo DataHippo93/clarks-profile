@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
-import { Header } from './Header';
+import { Header } from './BlogHeader';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();

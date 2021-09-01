@@ -1,42 +1,111 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import { graphql, Link, useScrollRestoration } from 'gatsby';
+import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { Header } from '../components/Blog/Header';
+import { Header } from '../components/Blog/BlogHeader';
 import BlogImg from '../components/Blog/BlogImage';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
-export default function Blog({ data }) {
-  const { posts } = data.blog;
+const PostCards = ({ posts, totalCount, cardsPerRow }) => {
+  let cardArray = [];
   const img = 'profile.jpg';
   const imageTitle = 'sample image';
+  let postCounter = totalCount + 1;
+  let CardRow = null;
+  const finalArray = [];
+
+  posts.forEach((post) => {
+    postCounter -= 1;
+    cardArray.push(
+      <article key={post.id} className="bloghome-card--wrapper">
+        <div className="blog_post">
+          <div className="img_pod">
+            <BlogImg alt={imageTitle} filename={img} />
+          </div>
+          <div className="container_copy">
+            <h3> Post #{postCounter}</h3>
+            <h4>{post.frontmatter.date}</h4>
+            <h4>{post.frontmatter.author}</h4>
+            <h1>{post.frontmatter.title}</h1>
+            <p>{post.excerpt}</p>
+          </div>
+          <Link to={`/the-sylvan-stoop-blog/${post.slug}`}> Read </Link>
+        </div>
+      </article>
+    );
+
+    if (cardArray.length === cardsPerRow || postCounter === 1) {
+      CardRow = <Row>{cardArray.map((Post) => Post)}</Row>;
+      finalArray.push(CardRow);
+      cardArray = [];
+    }
+  });
+
+  return <>{finalArray.map((row) => row)}</>;
+};
+
+export default function Blog({ data }) {
+  const { posts, pageInfo } = data.blog;
+  const [state, setState] = useState({ posts, pageInfo });
   const { title, description } = useSiteMetadata();
+  const ulScrollRestoration = useScrollRestoration(`page-component-ul-list`);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const searchResult = posts.filter((post) => {
+      const { description: desc, title: ttl } = post.frontmatter;
+      const regex = new RegExp(`${searchTerm}`, 'g');
+
+      if (
+        (desc && desc.toLowerCase().match(regex)) ||
+        (ttl && ttl.toLowerCase().match(regex)) ||
+        (post.excerpt && post.excerpt.toLowerCase().match(regex)) ||
+        searchTerm === ''
+      ) {
+        return true;
+      }
+
+      return false;
+    });
+
+    setState({ ...state, posts: searchResult, pageInfo: { totalCount: searchResult.length } });
+  }, [searchTerm]);
+
+  console.log(state);
 
   return (
     <>
       <Header siteTitle={title} siteDescription={description} />
-      <section id="bloghome">
-        <div>
-          <h1>My blog posts</h1>
 
-          {posts.map((post) => (
-            <article key={post.id}>
-              <div className="bloghome-card--wrapper">
-                <div className="blog_post">
-                  <div className="img_pod">
-                    <BlogImg alt={imageTitle} filename={img} />
-                  </div>
-                  <div className="container_copy">
-                    <h3>{post.frontmatter.date}</h3>
-                    <small>{post.frontmatter.author},</small>
-                    <h1>{post.frontmatter.title}</h1>
-                    <p>{post.excerpt}</p>
-                  </div>
-                  <Link to={`/the-sylvan-stoop-blog/${post.slug}`}> Read </Link>
-                </div>
+      <section id="bloghome">
+        <Container className="bloghome-container-wrapper" {...ulScrollRestoration}>
+          <Row>
+            <Col>
+              <div className="bloghome-searchbar-wrapper">
+                <h3 className="label"> Search Blog </h3>
+                <input
+                  type="text"
+                  placeholder="Type to filter posts..."
+                  className="input"
+                  onChange={(event) => setSearchTerm(event.target.value.toLowerCase())}
+                />
               </div>
-            </article>
-          ))}
-        </div>
+            </Col>
+          </Row>
+          <Row className="bloghome-post-wrapper">
+            <Col>
+              {state.pageInfo.totalCount > 0 ? (
+                <PostCards
+                  posts={state.posts}
+                  totalCount={state.pageInfo.totalCount}
+                  cardsPerRow={2}
+                />
+              ) : (
+                <h3 className="noPostsFound"> No Posts Found </h3>
+              )}
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );
@@ -44,17 +113,25 @@ export default function Blog({ data }) {
 
 export const pageQuery = graphql`
   query AllActiveBlogs {
-    blog: allMdx(filter: { frontmatter: { published: { eq: true } } }) {
+    blog: allMdx(
+      filter: { frontmatter: { published: { eq: true } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       posts: nodes {
         slug
+
         excerpt(pruneLength: 160)
         frontmatter {
           date(fromNow: true)
           title
           author
+          description
           published
         }
         id
+      }
+      pageInfo {
+        totalCount
       }
     }
   }
@@ -63,7 +140,16 @@ export const pageQuery = graphql`
 Blog.propTypes = {
   data: PropTypes.shape({
     blog: PropTypes.shape({
-      posts: PropTypes.array,
+      posts: PropTypes.arrayOf(PropTypes.object),
+      pageInfo: PropTypes.shape({
+        totalCount: PropTypes.number,
+      }),
     }),
   }),
+};
+
+PostCards.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object),
+  totalCount: PropTypes.number,
+  cardsPerRow: PropTypes.number,
 };

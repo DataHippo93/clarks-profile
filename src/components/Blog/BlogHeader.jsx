@@ -22,11 +22,12 @@ export const Header = ({ siteTitle }) => (
       </div>
 
       <div className="header-navRightButtons">
-        <Link to="/about/" className="lnk-about lnk lnk--blog">
-          About
-        </Link>
         <Link to="/" className="lnk-home lnk lnk--blog">
           Home
+        </Link>
+        <Link to="/about/" className="lnk-about lnk lnk--blog">
+          About
+          {/* A page about The Sylvan Stoop */}
         </Link>
         <Link to="/contact/" className="lnk-contact lnk lnk--blog">
           Contact
