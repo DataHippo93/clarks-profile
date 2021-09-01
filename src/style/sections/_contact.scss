@@ -1,10 +1,12 @@
 #contact {
-  background-image: linear-gradient(225deg, $white-color 0%, $white-color  100%);
-  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0 10rem 0;
+  background-color: $white-color;
+  background-image: linear-gradient(-135deg, $white-color 0%, $white-color 100%);
+  color: $white-color;
+  height: 100%;
+  border-top: 0px;
+  padding-top: 15rem;
   margin-top: -15rem;
-  margin-bottom: -1px;
+  padding-bottom: 10%;
   color: $dark-blue-text;
 
   @include respond(tab-land) {

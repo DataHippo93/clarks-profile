@@ -20,17 +20,32 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/content/blog/`,
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/blog/`,
+        name: `blog`,
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Clark Maine Profile Site`,
+        short_name: `Clark Profile`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#02aab0`,
@@ -53,22 +68,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-adsense`,
       options: {
         publisherId: `ca-pub-9692684321594139`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 700,
-            },
-          },
-        ],
       },
     },
   ],

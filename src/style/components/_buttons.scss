@@ -64,7 +64,7 @@
 .cta-btn--resume {
   color: $white-color;
   border: 2px solid $secondary-color;
-
+  font-size: 2.4rem;
   &::after {
     background: $white-color;
   }
@@ -78,7 +78,6 @@
     }
   }
 }
-
 
 /* contact Style */
 .cta-btn--contact {
@@ -99,11 +98,11 @@
   }
 }
 
-
 /* Link style */
 .cta-lnk--blog {
   color: $white-color;
   border: 2px solid $secondary-color;
+  font-size: 2.4rem;
 
   &::after {
     background: $white-color;

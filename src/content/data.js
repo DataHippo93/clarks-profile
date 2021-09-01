@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'Clark Maines Site', // e.g: 'Name | Developer'
+  title: 'clarkmaine.com', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: "Welcome to Clark Maine's Portfolio and Blog Website", // e.g: Welcome to my website
 };
