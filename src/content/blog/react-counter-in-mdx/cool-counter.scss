@@ -1,54 +1,3 @@
----
-title: Tickle Me Counter!
-date: '2021-09-02'
-author: Clark C Maine
-type: post
-published: true
-description: 'A super basic react counter application'
----
-
-# A super basic react counter application
-
-import Counter from './cool-counter.jsx';
-
-<Counter />
-
-### JSX
-
-```
-import React, { useState } from 'react';
-import './cool-counter.scss';
-
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  return (
-    <section id="coolcounter">
-      <div>
-        <h2> Click the button to increase the tickle count!</h2>
-        <h3> # of Tickles: {count} </h3>
-        <button
-          type="button"
-          className="glow-on-hover"
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          Tickle Me!
-        </button>
-      </div>
-    </section>
-  );
-};
-
-export default Counter;
-
-
-```
-
-### CSS
-
-```
 #coolcounter {
   body {
     margin: 0;
@@ -139,7 +88,3 @@ export default Counter;
     }
   }
 }
-
-
-
-```

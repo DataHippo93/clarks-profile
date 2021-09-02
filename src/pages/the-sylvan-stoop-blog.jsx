@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { graphql, Link, useScrollRestoration } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+
 import { Header } from '../components/Blog/BlogHeader';
 import Footer from '../components/Footer/Footer';
 import BlogImg from '../components/Blog/BlogImage';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { PortfolioProvider } from '../context/context';
+
 import { heroData, aboutData, projectsData, contactData, footerData } from '../content/data';
+import '../style/main.scss';
 
 const PostCards = ({ posts, totalCount, cardsPerRow }) => {
   let cardArray = [];

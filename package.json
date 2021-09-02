@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.3.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "bootstrap": "^4.5.0",
@@ -34,6 +35,7 @@
     "gatsby-plugin-styled-components": "^4.12.0",
     "gatsby-remark-classes": "^1.0.0",
     "gatsby-remark-design-system": "^2.0.1",
+    "gatsby-remark-highlight-code": "^3.0.1",
     "gatsby-remark-images": "^5.1.0",
     "gatsby-source-filesystem": "^3.12.0",
     "gatsby-transformer-remark": "^4.1.0",
