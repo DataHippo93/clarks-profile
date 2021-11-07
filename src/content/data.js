@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export const headData = {
   title: 'clarkmaine.com', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
-  description: "Welcome to Clark Maine's Portfolio and Blog Website", // e.g: Welcome to my website
+  description: 'Welcome to YC Consulting', // e.g: Welcome to my website
 };
 
 // HERO DATA
@@ -34,8 +34,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'services-data.jpg',
     title: 'Data Engineering Services',
-    info:
-      'Data pipeline construction, custom ETL, database tuning, query optimization and API integrations',
+    info: 'Data pipeline construction, custom ETL, database tuning, query optimization and API integrations',
     info2:
       'Draw on my extensive knowledge of information technology and data engineering to make your data pipelines work for you.',
     url: '',
