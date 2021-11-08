@@ -2,15 +2,15 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'ycconsulting.biz', // e.g: 'Name | Developer'
+  title: 'YC Consulting', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'Welcome to YC Consulting', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
-  title: 'YC',
-  name: 'Consulting',
+  title: 'Your Technology',
+  name: 'Advisors',
   subtitle:
     '"We help companies transform information technology and online marketing into strategic differentiators"',
   cta: 'Learn more',
