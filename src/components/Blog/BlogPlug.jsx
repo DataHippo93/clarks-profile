@@ -11,7 +11,12 @@ const BlogPlug = () => {
         <Title title="Our Blog" />
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="blogplug-wrapper">
-            <p className="blogplug-wrapper__text">The Sylvan Stoop</p>
+            <h2 className="blogplug-wrapper__text">
+              <b> The Sylvan Stoop</b>
+            </h2>
+            <h3 className="blogplug-wrapper__text">
+              <i> Stories about how to work with data and get results </i>
+            </h3>
             <Link to="/the-sylvan-stoop-blog" className="cta-btn cta-lnk--blog">
               Read Now
             </Link>

@@ -40,7 +40,7 @@ const Header = () => {
           }}
         >
           <div data-tilt className="thumbnail rounded">
-            <IconImg alt="ycc-icon" filename="icon.jpg" />
+            <IconImg alt="ycc-icon" filename="iconLarge.jpg" />
           </div>
         </Tilt>
 

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.clarkmaine.com`,
+    siteUrl: `https://www.ycconsulting.biz`,
   },
   plugins: [
     `gatsby-plugin-sass`,

@@ -5,7 +5,7 @@
   height: 100%;
   border-top: 0px;
   margin-top: -15rem;
-  padding-top: 15rem;
+  padding-top: 10vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
   padding-bottom: 15%;
@@ -19,6 +19,10 @@
   .blogplug-wrapper {
     @include respond(phone) {
       padding-bottom: 5rem;
+    }
+
+    &__text {
+      margin-bottom: 2em;
     }
 
     &__image {
