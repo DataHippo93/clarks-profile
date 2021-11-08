@@ -1,7 +1,7 @@
 {
-  "name": "clark-maine-profile-site",
+  "name": "YC-Consulting-Company-site",
   "private": true,
-  "description": "A expressive profile site for Clark C Maine",
+  "description": "A company website for YC Consulting",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

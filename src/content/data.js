@@ -2,17 +2,17 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'clarkmaine.com', // e.g: 'Name | Developer'
+  title: 'ycconsulting.biz', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'Welcome to YC Consulting', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
-  title: 'Senior Data Engineer',
-  name: 'Clark C. Maine',
+  title: 'YC',
+  name: 'Consulting',
   subtitle:
-    '"I help companies transform information technology and data into strategic differentiators"',
+    '"We help companies transform information technology and online marketing into strategic differentiators"',
   cta: 'Learn more',
 };
 
@@ -33,13 +33,33 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'services-data.jpg',
-    title: 'Data Engineering Services',
+    title: 'Data Engineering',
     info: 'Data pipeline construction, custom ETL, database tuning, query optimization and API integrations',
     info2:
-      'Draw on my extensive knowledge of information technology and data engineering to make your data pipelines work for you.',
+      'Draw on our extensive knowledge of information technology and data engineering to make your data pipelines work for you',
     url: '',
     repo: '', // if no repo, the button will not show up
   },
+  {
+    id: nanoid(),
+    img: 'robot.jpg',
+    title: 'Robotic Process Automation',
+    info: 'Process Automation, Web Scraping, Automated Workflows',
+    info2: 'Save time and cost by Automating your digital workflows',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+
+  {
+    id: nanoid(),
+    img: 'business-people.jpg',
+    title: 'Digital Marketing',
+    info: 'Social media marketing, Web development, content creation and copy writing, Amazon FBA',
+    info2: 'Grow your sales with our digital marketing services',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+
   // {
   //   id: nanoid(),
   //   img: 'services-data.jpg',
@@ -62,8 +82,8 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: 'Would you like to work with me?',
-  btn: 'Email Clark',
+  cta: 'Would you like to work with us?',
+  btn: 'Email Us',
   email: 'cmaine@ycconsulting.biz',
 };
 
@@ -94,7 +114,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'rss',
-      url: 'https://clarkmaine.com/rss.xml',
+      url: 'https://ycconsulting.biz/rss.xml',
     },
   ],
 };
