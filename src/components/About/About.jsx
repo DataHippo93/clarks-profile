@@ -29,11 +29,18 @@ const About = () => {
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
+              <div className="about-wrapper__name">
+                <h1> Clark C. Maine</h1>
+              </div>
+            </Fade>
+
+            <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
                 <AboutImg alt="profile picture" filename={img} />
               </div>
             </Fade>
           </Col>
+
           <Col md={6} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
@@ -47,9 +54,9 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
-                      href={resume}
+                      href="https://clark.ycconsulting.biz"
                     >
-                      Resume
+                      Profile Site
                     </a>
                   </span>
                 )}

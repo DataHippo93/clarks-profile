@@ -28,13 +28,7 @@ const IconImg = ({ filename, alt }) => (
       if (!image) return null;
 
       const imageFluid = image.node.childImageSharp.fluid;
-      return (
-        <Img
-          alt={alt}
-          fluid={imageFluid}
-          style={{ width: '300px', height: '300px', margin: '2em', 'horizontal-align': 'middle' }}
-        />
-      );
+      return <Img alt={alt} fluid={imageFluid} className="IconImg" />;
     }}
   />
 );

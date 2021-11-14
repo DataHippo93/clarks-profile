@@ -9,8 +9,8 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Your Technology',
-  name: 'Advisors',
+  title: 'Make Technology A ',
+  name: 'Differentiator',
   subtitle:
     '"We help companies transform information technology and online marketing into strategic differentiators"',
   cta: 'Learn more',

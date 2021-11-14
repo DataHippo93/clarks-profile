@@ -26,24 +26,25 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
-        <Tilt
-          options={{
-            reverse: false,
-            max: 8,
-            perspective: 1000,
-            scale: 1,
-            speed: 300,
-            transition: true,
-            axis: null,
-            reset: true,
-            easing: 'cubic-bezier(.03,.98,.52,.99)',
-          }}
-        >
-          <div data-tilt className="thumbnail rounded">
-            <IconImg alt="ycc-icon" filename="iconLarge.jpg" />
-          </div>
-        </Tilt>
-
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <Tilt
+            options={{
+              reverse: false,
+              max: 8,
+              perspective: 1000,
+              scale: 1,
+              speed: 300,
+              transition: true,
+              axis: null,
+              reset: true,
+              easing: 'cubic-bezier(.03,.98,.52,.99)',
+            }}
+          >
+            <div data-tilt className="thumnail rounded">
+              <IconImg alt="ycc-icon" filename="iconLarge.jpg" />
+            </div>
+          </Tilt>
+        </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {title} <span className="text-color-main">{name}</span>
